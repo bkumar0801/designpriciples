@@ -3,11 +3,13 @@ package main.single;
 import java.util.ArrayList;
 
 public class AreaAggregator {
+
     private ArrayList<Shape> Shapes = new ArrayList<>();
 
     public void AddShape(Shape shape) {
         Shapes.add(shape);
     }
+
     public int Sum() {
         int sum = 0;
         for (Shape shape: Shapes) {
@@ -18,5 +20,9 @@ public class AreaAggregator {
             }
         }
         return sum;
+    }
+
+    public String Output() {
+        return "Sum of areas :" + Integer.toString(Sum());
     }
 }
