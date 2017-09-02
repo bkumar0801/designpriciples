@@ -1,9 +1,9 @@
-package test.single;
+package test.problem;
 
 
-import main.single.AreaAggregator;
-import main.single.Circle;
-import main.single.Square;
+import main.problem.AreaAggregator;
+import main.problem.Circle;
+import main.problem.Square;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

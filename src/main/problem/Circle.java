@@ -1,4 +1,4 @@
-package main.single;
+package main.problem;
 
 public class Circle implements Shape{
     private int radius;

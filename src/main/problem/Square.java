@@ -1,4 +1,4 @@
-package main.single;
+package main.problem;
 
 public class Square implements Shape {
     private int side;
