@@ -16,13 +16,4 @@ public class AreaAggregatorTest {
         areaAggregator.AddShape(new Square(5));
         assertEquals(103, areaAggregator.Sum());
     }
-
-    @Test
-    public void ShouldOutputInString() {
-        AreaAggregator areaAggregator = new AreaAggregator();
-        areaAggregator.AddShape(new Circle(5));
-        areaAggregator.AddShape(new Square(5));
-        assertEquals("Sum of areas :103", areaAggregator.Output());
-    }
-
 }

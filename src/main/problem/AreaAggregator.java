@@ -21,8 +21,4 @@ public class AreaAggregator {
         }
         return sum;
     }
-
-    public String Output() {
-        return "Sum of areas :" + Integer.toString(Sum());
-    }
 }
