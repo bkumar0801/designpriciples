@@ -5,7 +5,9 @@ public class Square implements Shape {
     public Square(int side) {
         this.side = side;
     }
-    public int getSide() {
-        return side;
+
+    @Override
+    public int Area() {
+        return side*side;
     }
 }

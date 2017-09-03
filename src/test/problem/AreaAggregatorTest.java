@@ -1,6 +1,5 @@
 package test.problem;
 
-
 import main.problem.AreaAggregator;
 import main.problem.Circle;
 import main.problem.Square;
