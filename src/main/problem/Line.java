@@ -5,4 +5,9 @@ public class Line implements Shape {
     public Line(int length) {
         this.length = length;
     }
+
+    @Override
+    public int Area() {
+        return 0;
+    }
 }
