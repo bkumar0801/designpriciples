@@ -1,7 +1,7 @@
 package main.db;
 
-public class MySQLConnection {
+public class MySQLConnection implements DBConnectionInterface{
     public String Connect() {
-        return "Database conection";
+        return "Database connection";
     }
 }

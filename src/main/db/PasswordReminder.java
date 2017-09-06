@@ -1,7 +1,7 @@
 package main.db;
 
 public class PasswordReminder {
-    public PasswordReminder(MySQLConnection dbConnection) {
+    public PasswordReminder(DBConnectionInterface dbConnection) {
         dbConnection.Connect();
     }
 }
