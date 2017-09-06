@@ -10,4 +10,9 @@ public class Square implements Shape {
     public int Area() {
         return side*side;
     }
+
+    @Override
+    public int Volume() {
+        return 0;
+    }
 }

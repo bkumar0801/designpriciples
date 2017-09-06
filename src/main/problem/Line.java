@@ -16,4 +16,9 @@ public class Line implements Shape {
         }
         return -1;
     }
+
+    @Override
+    public int Volume() {
+        return 0;
+    }
 }

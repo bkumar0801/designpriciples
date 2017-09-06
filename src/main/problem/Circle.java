@@ -10,4 +10,7 @@ public class Circle implements Shape{
     public int Area() {
         return (int)(Math.PI * radius * radius);
     }
+
+    @Override
+    public int Volume() { return  0; }
 }
