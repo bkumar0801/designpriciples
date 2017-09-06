@@ -5,20 +5,4 @@ public class Line implements Shape {
     public Line(int length) {
         this.length = length;
     }
-
-    @Override
-    public int Area() {
-        try {
-            throw new IDontActuallyHaveAreaException("I have no area");
-        }
-        catch (IDontActuallyHaveAreaException e) {
-            e.printStackTrace();
-        }
-        return -1;
-    }
-
-    @Override
-    public int Volume() {
-        return 0;
-    }
 }

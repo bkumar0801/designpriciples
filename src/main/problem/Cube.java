@@ -5,12 +5,10 @@ public class Cube implements Shape {
     public Cube(int side) {
         this.side = side;
     }
-    @Override
     public int Volume() {
         return side * side * side;
     }
 
-    @Override
     public int Area() {
         return 6 * side * side;
     }
