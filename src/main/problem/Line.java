@@ -1,13 +1,11 @@
 package main.problem;
 
-public class Line implements Shape {
+public class Line implements BasicShape {
     private int length;
     public Line(int length) {
         this.length = length;
     }
-
-    @Override
-    public int Area() {
-        return 0;
+    public int getLength() {
+        return length;
     }
 }
