@@ -6,4 +6,4 @@ A class should have one and only one reason to change, meaning that a class shou
 
 Let's fist look at the code and identify what doesn't comply with Single-Responsibility. Other things looks fine in terms of single responsibility except the code in :  ```src/main/problem/AreaAggregator.java```
 
-AreaAggregator class aggregate areas of different shapes and output.
+```AreaAggregator``` class has two method ```Sum``` (aggregates area of different shapes) and ```Output```.
