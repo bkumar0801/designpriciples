@@ -26,3 +26,5 @@ Coming back to original question, what if client needs output in PDF format? No 
 Now cool, right? Yeah.
 
 Switch to branch, ```single_responsibility_resolved``` for implementation.
+
+# 'O' : Open-Close Priciple
