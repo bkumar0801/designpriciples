@@ -7,3 +7,5 @@ A class should have one and only one reason to change, meaning that a class shou
 Let's fist look at the code and identify what doesn't comply with Single-Responsibility. Other things looks fine in terms of single responsibility except the code in :  ```src/main/problem/AreaAggregator.java```
 
 ```AreaAggregator``` class has two methods ```Sum``` (aggregates area of different shapes) and ```Output``` (outputs aggregated area). Having two methods is not the problem. The problem is it does two things : summing areas and print output. Basically, this violates the single-responsibility priciple.
+
+Okay, lets re-verify this. Let's do some modification: add a new shape rectangle. What do you think, how would your AreaAggregator change? Well you would accomodate changes to sum Rectangle area in method Sum. So far, all good.
