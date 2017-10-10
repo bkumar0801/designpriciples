@@ -13,3 +13,14 @@ Okay, lets re-verify this. Let's do some modification: add a new shape ```Rectan
 What if client needs output in PDF format (or in any other format)? How would it impact ```AreaAggregator```? Yes, you would again need to accomodate this change in the method ```Output```. Basically, two reasons to change this class. Do you really think, output in different format is AreaAggregator's concern.
 
 Now, that we know, what the problem is, can we try to resolve this?
+
+How?
+
+By relieving, AreaAggregator from its extra responsibility. Since Output in current implementation is in String format, we will assign this responsibility to a new class ```StringOutputter```. Cool ? 
+
+Not cool. Well, ```AreaAggregator``` is fine, because it has only one job and only one reason to change.
+```StringOutputter```is also fine, because it has only one job and only one reason to change. 
+
+Coming back to original question, what if client needs output in PDF format? No problem, we will write new class ```PdfOutputtter```. And, this will be the best time to introduce an interface ```Outputter```. Both StringOutputter and PdfOutputter will implement this interface. No existing code change and no violation of single responsibility.
+
+Switch to branch, ```single_responsibility_resolved``` to look for solution.
