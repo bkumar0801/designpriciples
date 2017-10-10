@@ -27,4 +27,4 @@ Now cool, right? Yeah.
 
 Switch to branch, ```single_responsibility_resolved``` for implementation.
 
-# 'O' : Open-Close Priciple
+# 'O' : Open-Close Principle
