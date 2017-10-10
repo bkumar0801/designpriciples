@@ -1,4 +1,4 @@
-The code in master branch is written in very crude way. The purpose is to understand design principle, identify the code which doesn't comply and resolve them. For hands-on, just check out the master branch and identify improvement and resolve one by one.
+The code in master branch is written in very crude way. The purpose is to make you understand the design principles, not just that, but to identify the code which doesn't comply with these principles and resolve them. For hands-on, just check out the master branch, identify improvements and resolve them one by one.
 
 # SOLID Design Principles 
 # 'S' : Single-responsibility:
