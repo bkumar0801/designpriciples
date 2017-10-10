@@ -11,3 +11,5 @@ Let's fist look at the code and identify what doesn't comply with Single-Respons
 Okay, lets re-verify this. Let's do some modification: add a new shape ```Rectangle```. What do you think, how would your ```AreaAggregator``` change? Well you would accomodate changes to add Rectangle's area in method Sum. So far, all good.
 
 What if client needs output in PDF format (or in any other format)? How would it impact ```AreaAggregator```? Yes, you would again need to accomodate this change in the method ```Output```. Basically, two reasons to change this class. Do you really think, output in different format is AreaAggregator's concern.
+
+Now, that we know, what the problem is, can we try to resolve this?
