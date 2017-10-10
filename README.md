@@ -4,4 +4,6 @@ The code in master branch is written in very crude way. The purpose is to make y
 # 'S' : Single-responsibility:
 A class should have one and only one reason to change, meaning that a class should have only one job.
 
-Let's fist look at the code and identify what doesn't comply with Single-Responsibility. Other things looks fine in terms of single responsibility except the code in :  ```src/main/problem/AreaAggregator.java``` 
+Let's fist look at the code and identify what doesn't comply with Single-Responsibility. Other things looks fine in terms of single responsibility except the code in :  ```src/main/problem/AreaAggregator.java```
+
+AreaAggregator class aggregate areas of different shapes and output.
