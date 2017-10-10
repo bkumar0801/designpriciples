@@ -21,6 +21,8 @@ By relieving, AreaAggregator from its extra responsibility. Since Output in curr
 Not cool. Well, ```AreaAggregator``` is fine, because it has only one job and only one reason to change.
 ```StringOutputter```is also fine, because it has only one job and only one reason to change. 
 
-Coming back to original question, what if client needs output in PDF format? No problem, we will write new class ```PdfOutputtter```. And, this will be the best time to introduce an interface ```Outputter```. Both StringOutputter and PdfOutputter will implement this interface. No existing code change and no violation of single responsibility.
+Coming back to original question, what if client needs output in PDF format? No problem, we will write new class ```PdfOutputtter```. And, this will be the best time to introduce an interface ```Outputter```. Both ```StringOutputter``` and ```PdfOutputter``` will implement this interface. No existing code change and no violation of single responsibility.
 
-Switch to branch, ```single_responsibility_resolved``` to look for solution.
+Now cool, right? Yeah.
+
+Switch to branch, ```single_responsibility_resolved``` for implementation.
