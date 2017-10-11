@@ -27,4 +27,5 @@ Now cool, right? Yeah.
 
 Switch to branch, ```single_responsibility_resolved``` for implementation.
 
-# 'O' : Open-Close Principle
+# 'O' : Open/Closed Principle
+> Objects or entities should be open for extension, but closed for modification.
