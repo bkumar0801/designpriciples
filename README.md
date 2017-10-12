@@ -36,3 +36,34 @@ Switch to branch, ```single_responsibility_resolved``` for implementation.
 ### Working Branch : ```single_responsibility_resolved```
 
 Let's discuss same question : add a new shape ```Rectangle```. And, answer is still same: code changes required in method ```Sum``` of the class ```AreaAggregator``` to accomodate this change. That means, we are modifying the class itself - that's the problem. It is breaking open-closed principle. 
+
+```
+public int Sum() {
+        int sum = 0;
+        for (Shape shape: Shapes) {
+            if(shape.getClass().equals(Circle.class)) {
+                sum += Math.PI * Math.pow(((Circle) shape).getRadius(), 2);
+            } else if (shape.getClass().equals(Square.class)) {
+                sum += Math.pow(((Square) shape).getSide(), 2);
+            }
+        }
+        return sum;
+} 
+```
+In simple words, what is smelling is, we calculate area of each shapes in ```Sum```. Somehow, if we get rid of this, it will help.
+
+Let each class calculates it's own area, and we will simply use here for summation. Then, it will be fine, right?
+
+Let's see how would this look like:
+
+```
+public int Sum() {
+        int sum = 0;
+        for (Shape shape: Shapes) {
+            sum += shape.Area();
+        }
+        return sum;
+    }
+```
+
+
