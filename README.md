@@ -4,7 +4,8 @@
 # 'S' : Single-responsibility:
 > A class should have one and only one reason to change, meaning that a class should have only one job.
 
-###Working Branch : ```master```
+## Working Branch : ```master```
+
 Let's fist look at the code and identify what doesn't comply with Single-Responsibility. Other things looks fine in terms of single responsibility except the code in :  ```src/main/problem/AreaAggregator.java```
 
 ```AreaAggregator``` class has two methods ```Sum``` (aggregates area of different shapes) and ```Output``` (outputs aggregated area). Having two methods is not the problem. The problem is this class does two things : summing areas and print output. Basically, this violates the single-responsibility priciple.
