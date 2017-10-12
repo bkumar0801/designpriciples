@@ -35,4 +35,4 @@ Switch to branch, ```single_responsibility_resolved``` for implementation.
 
 ### Working Branch : ```single_responsibility_resolved```
 
-Let's discuss same question : add a new shape ```Rectangle```. And, answer is still same: code changes required in method ```Sum``` to accomodate this change. That means, we are modifying the class itself - that's the problem. It is breaking open-closed principle. 
+Let's discuss same question : add a new shape ```Rectangle```. And, answer is still same: code changes required in method ```Sum``` of the class ```AreaAggregator``` to accomodate this change. That means, we are modifying the class itself - that's the problem. It is breaking open-closed principle. 
