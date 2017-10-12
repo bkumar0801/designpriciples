@@ -3,6 +3,7 @@
 # SOLID Design Principles 
 # 'S' : Single-responsibility:
 > A class should have one and only one reason to change, meaning that a class should have only one job.
+
 ###Working Branch : ```master```
 Let's fist look at the code and identify what doesn't comply with Single-Responsibility. Other things looks fine in terms of single responsibility except the code in :  ```src/main/problem/AreaAggregator.java```
 
