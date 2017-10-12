@@ -67,8 +67,10 @@ public int Sum() {
 ```
 Introducing method ```Area``` in interface ```Shape``` will help. Then all shapes who are implementing interface will take care of it's own area calculation.
 
-```public interface Shape {
+```
+public interface Shape {
     public int Area();
-}```
+}
+```
 
 
