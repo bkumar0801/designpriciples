@@ -29,3 +29,4 @@ Switch to branch, ```single_responsibility_resolved``` for implementation.
 
 # 'O' : Open/Closed Principle
 > Objects or entities should be open for extension, but closed for modification.
+> This simply means that a class should be easily extendable without modifying the class itself.
