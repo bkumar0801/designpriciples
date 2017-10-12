@@ -72,5 +72,9 @@ public interface Shape {
     public int Area();
 }
 ```
+Still, question is same : add a new shape ```Rectangle```. But, now the answer is different. Write ```Rectangle``` class implements ```Shape``` interface and ```Area``` method. All new code, no existing code changes required.
 
+Much cleaner code. 
+
+For implementation switch to branch ```open_closed_resolved```
 
