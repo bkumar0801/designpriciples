@@ -80,3 +80,9 @@ For implementation switch to branch ```open_closed_resolved```
 
 # 'L' : Liskov substitution principle
 > All this is stating is that every subclass/derived class should be substitutable for their base/parent class. Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
+
+### Working Branch : ```open_closed_resolved```
+
+We have shapes like Circle, Cube, Line and Square in code. Re-look at the code, carefully, all shapes has some Area except Line. It has 0 area. 
+
+As of now, it's Area method of Shape Line intentionally returning 0. But, we can also throw an exception ```IActuallyDontHaveArea```. Well, that's problem : program will crash.
