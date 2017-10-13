@@ -106,6 +106,8 @@ Switch to the branch : ```liskov_substitution_resolved``` for implementation
 # 'I' : Interface Segregation Principle
 > A client should never be forced to implement an interface that it doesn't use or clients shouldn't be forced to depend on methods they do not use.
 
+### Working Branch : ```liskov_substitution_resolved```
+
 we know that we also have solid shapes like Cube, so since we would also want to calculate the volume of the shape, we can add another contract to the Shape Interface.
 
 ```
