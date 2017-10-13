@@ -95,10 +95,13 @@ So far, so good. But if we replace line 1 by
 ```
 Shape shape = new Line(10);
 ```
-The program will throw and exception : ```IDontActuallyHaveArea```
+The program will throw an exception : ```IDontActuallyHaveArea```
 
 How to resolve this? By not implementing interface Shape. Let shape ```Line``` implement another interface ```BasicShape```.
 
 Sounds good.
 
 Switch to the branch : ```liskov_substitution_resolved``` for implementation
+
+# 'I' : Interface Segregation Principle
+> A client should never be forced to implement an interface that it doesn't use or clients shouldn't be forced to depend on methods they do not use.
