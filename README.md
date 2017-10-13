@@ -1,7 +1,7 @@
 > The code in master branch is written in very crude way. The purpose is to make you understand the design principles, not just that, but to help you identify the code which doesn't comply to these principles and resolve them. For hands-on, just check out the master branch, identify improvements and resolve them one by one.
 
 # SOLID Design Principles 
-# 'S' : Single-responsibility:
+## 'S' : Single-responsibility:
 > A class should have one and only one reason to change, meaning that a class should have only one job.
 
 ### Working Branch : ```master```
@@ -29,7 +29,7 @@ Now cool, right? Yeah.
 
 Switch to branch, ```single_responsibility_resolved``` for implementation.
 
-# 'O' : Open/Closed Principle
+## 'O' : Open/Closed Principle
 > Objects or entities should be open for extension, but closed for modification.
 > This simply means that a class should be easily extendable without modifying the class itself.
 
@@ -78,7 +78,7 @@ Much cleaner code.
 
 For implementation switch to branch ```open_closed_resolved```
 
-# 'L' : Liskov substitution principle
+## 'L' : Liskov substitution principle
 > All this is stating is that every subclass/derived class should be substitutable for their base/parent class. Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
 
 ### Working Branch : ```open_closed_resolved```
@@ -103,7 +103,7 @@ Sounds good.
 
 Switch to the branch : ```liskov_substitution_resolved``` for implementation
 
-# 'I' : Interface Segregation Principle
+## 'I' : Interface Segregation Principle
 > A client should never be forced to implement an interface that it doesn't use or clients shouldn't be forced to depend on methods they do not use.
 
 ### Working Branch : ```liskov_substitution_resolved```
@@ -140,6 +140,53 @@ public class Cube implements Shape, SolidShape {
     @Override
     public int Area() {
         return 6 * side * side;
+    }
+}
+```
+## 'D' : Dependency Inversion Principle
+> Entities must depend on abstractions not on concretions. It states that the high level module must not depend on the low level module, but they should depend on abstractions.
+
+Look at the code below :
+
+```
+public class MySQLConnection {
+    public String Connect() {
+        return "Database connection";
+    }
+}
+
+public class PasswordReminder {
+    public PasswordReminder(MySQLConnection dbConnection) {
+        dbConnection.Connect();
+    }
+}
+```
+First the MySQLConnection is the low level module while the PasswordReminder is high level, but according to the definition which states that Depend on Abstraction not on concretions, this snippet above violates this principle as the PasswordReminder class is being forced to depend on the MySQLConnection class.
+
+Later if you were to change the database engine, you would also have to edit the PasswordReminder class and thus violates Open-close principle.
+
+The PasswordReminder class should not care what database your application uses, to fix this again we "code to an interface", since high level and low level modules should depend on abstraction, we can create an interface:
+```
+public interface DBConnectionInterface {
+    public String Connect();
+}
+```
+The interface has a connect method and the MySQLConnection class implements this interface, also instead of directly using MySQLConnection class in the constructor of the PasswordReminder, we instead use the interface and no matter the type of database your application uses, the PasswordReminder class can easily connect to the database without any problems and OCP is not violated.
+
+After resolving this issue, our code will look like :
+```
+public interface DBConnectionInterface {
+    public String Connect();
+}
+public class MySQLConnection implements DBConnectionInterface {
+    public String Connect() {
+        return "Database connection";
+    }
+}
+
+public class PasswordReminder {
+    public PasswordReminder(DBConnectionInterface dbConnection) {
+        dbConnection.Connect();
     }
 }
 ```
