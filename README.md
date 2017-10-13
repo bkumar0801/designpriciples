@@ -105,3 +105,39 @@ Switch to the branch : ```liskov_substitution_resolved``` for implementation
 
 # 'I' : Interface Segregation Principle
 > A client should never be forced to implement an interface that it doesn't use or clients shouldn't be forced to depend on methods they do not use.
+
+we know that we also have solid shapes like Cube, so since we would also want to calculate the volume of the shape, we can add another contract to the Shape Interface.
+
+```
+public interface Shape {
+    public int Area();
+    public int Volume();
+}
+```
+Any shape we create must implement the ```Volume``` method, but we know that Square and Circle are flat shapes and that they do not have volumes, so this interface would force the ```Square``` and ```Circle``` class to implement a method that it has no use of.
+
+ISP says no to this, instead you could create another interface called ```SolidShape``` that has the Volume contract and solid shapes like cubes e.t.c can implement this interface.
+
+```
+public interface SolidShape {
+    public int Volume();
+}
+```
+class ```Cube``` would now implement Shape for Area and SolidShape for Volume.
+
+```
+public class Cube implements Shape, SolidShape {
+    private int side;
+    public Cube(int side) {
+        this.side = side;
+    }
+    @Override
+    public int Volume() {
+        return side * side * side;
+    }
+    @Override
+    public int Area() {
+        return 6 * side * side;
+    }
+}
+```
