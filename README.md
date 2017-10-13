@@ -85,7 +85,7 @@ For implementation switch to branch ```open_closed_resolved```
 
 We have shapes like Circle, Cube, Line and Square in code. Re-look at the code, carefully. Can you spot the problem? All shapes has some Area except Line. It has 0 area. 
 
-As of now, Area method of Shape Line intentionally returning 0. But, ideally, we should throw an exception ```IActuallyDontHaveArea```. This is a violation of the Liskov Substitution Principle.
+As of now, Area method of Shape Line intentionally returning 0. But, ideally, we should throw an exception ```IDontActuallyHaveArea```. This is a violation of the Liskov Substitution Principle.
 
 ```
 1     Shape shape = new Square(10);
@@ -95,7 +95,7 @@ So far, so good. But if we replace line 1 by
 ```
 Shape shape = new Line(10);
 ```
-The program will throw and exception : ```IActuallyDontHaveArea```
+The program will throw and exception : ```IDontActuallyHaveArea```
 
 How to resolve this? By not implementing interface Shape. Let shape ```Line``` implement another interface ```BasicShape```.
 
