@@ -78,3 +78,5 @@ Much cleaner code.
 
 For implementation switch to branch ```open_closed_resolved```
 
+# 'L' : Liskov substitution principle
+> All this is stating is that every subclass/derived class should be substitutable for their base/parent class. Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
