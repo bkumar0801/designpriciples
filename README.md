@@ -83,6 +83,22 @@ For implementation switch to branch ```open_closed_resolved```
 
 ### Working Branch : ```open_closed_resolved```
 
-We have shapes like Circle, Cube, Line and Square in code. Re-look at the code, carefully, all shapes has some Area except Line. It has 0 area. 
+We have shapes like Circle, Cube, Line and Square in code. Re-look at the code, carefully. Can you spot the problem? All shapes has some Area except Line. It has 0 area. 
 
-As of now, it's Area method of Shape Line intentionally returning 0. But, we can also throw an exception ```IActuallyDontHaveArea```. Well, that's problem : program will crash.
+As of now, Area method of Shape Line intentionally returning 0. But, ideally, we should throw an exception ```IActuallyDontHaveArea```. This is a violation of the Liskov Substitution Principle.
+
+```
+1     Shape shape = new Square(10);
+2     shape.Area();
+```
+So far, so good. But if we replace line 1 by 
+```
+Shape shape = new Line(10);
+```
+The program will throw and exception : ```IActuallyDontHaveArea```
+
+How to resolve this? By not implementing interface Shape. Let shape ```Line``` implement another interface ```BasicShape```.
+
+Sounds good.
+
+Switch to the branch : ```liskov_substitution_resolved``` for implementation
